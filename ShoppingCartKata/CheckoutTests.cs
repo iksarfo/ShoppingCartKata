@@ -29,13 +29,13 @@ namespace ShoppingCartKata
     [TestFixture]
     public class CheckoutTests
     {
-        [Test]
-        public void AcceptsItems()
+        [TestCase("apple", 1)]
+        [TestCase("apple,orange", 2)]
+        public void AcceptsItems(string items, int expectedCount)
         {
             var checkout = new Checkout();
-            var items = "apple,orange";
             var scannedItems = checkout.Scan(items);
-            Assert.That(scannedItems.Length, Is.EqualTo(2));
+            Assert.That(scannedItems.Length, Is.EqualTo(expectedCount));
         }
     }
 
@@ -43,7 +43,7 @@ namespace ShoppingCartKata
     {
         public string[] Scan(string items)
         {
-            throw new System.NotImplementedException();
+            return items.Split(new []{ ',' });
         }
     }
 }

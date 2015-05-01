@@ -4,3 +4,4 @@ ShoppingCartKata.v2.ncrunchproject
 ShoppingCartKata/obj/
 ShoppingCartKata/bin/
 packages/NUnit.2.6.4/
+packages/Moq.4.2.1502.0911/

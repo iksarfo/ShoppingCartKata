@@ -7,11 +7,11 @@ namespace ShoppingCartKata
         decimal Sum(string[] scannedItems);
     }
 
-    public class Calculator : ICalculate
+    public class SimplePricing : ICalculate
     {
         private readonly IPrice _price;
 
-        public Calculator(IPrice price)
+        public SimplePricing(IPrice price)
         {
             _price = price;
         }

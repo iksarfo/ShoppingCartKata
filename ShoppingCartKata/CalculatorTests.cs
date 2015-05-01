@@ -17,7 +17,7 @@ namespace ShoppingCartKata
             mockPricingList.Setup(x => x.Item("orange")).Returns(0.25m);
 
             var scannedItems = items.Split(new[] {','});
-            var totalCost = new Calculator(mockPricingList.Object).Sum(scannedItems);
+            var totalCost = new SimplePricing(mockPricingList.Object).Sum(scannedItems);
 
             Assert.That(totalCost, Is.EqualTo(expectedTotalCost));
         }

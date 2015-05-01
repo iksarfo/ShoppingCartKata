@@ -5,12 +5,13 @@ namespace ShoppingCartKata
     [TestFixture]
     public class PricingTests
     {
-        [Test]
-        public void PricesItems()
+        [TestCase("apple", 0.60)]
+        [TestCase("orange", 0.25)]
+        public void PricesItems(string itemName, double price)
         {
-            var pricer = new PricingList("apple,60;orange,25");
-            var itemPrice = PricingList.Item("apple");
-            Assert.That(itemPrice, Is.EqualTo(0.60m));
+            var pricingList = new PricingList("apple,0.60;orange,0.25");
+            var itemPrice = pricingList.Item(itemName);
+            Assert.That(itemPrice, Is.EqualTo(price));
         }
     }
 }

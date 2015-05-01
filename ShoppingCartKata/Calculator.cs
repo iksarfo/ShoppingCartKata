@@ -1,15 +1,19 @@
+using System.Linq;
+
 namespace ShoppingCartKata
 {
     public class Calculator
     {
+        private readonly IPrice _price;
+
         public Calculator(IPrice price)
         {
-            throw new System.NotImplementedException();
+            _price = price;
         }
 
         public decimal Sum(string[] scannedItems)
         {
-            throw new System.NotImplementedException();
+            return scannedItems.Sum(scannedItem => _price.Item(scannedItem));
         }
     }
 }

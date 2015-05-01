@@ -2,7 +2,12 @@ using System.Linq;
 
 namespace ShoppingCartKata
 {
-    public class Calculator
+    public interface ICalculate
+    {
+        decimal Sum(string[] scannedItems);
+    }
+
+    public class Calculator : ICalculate
     {
         private readonly IPrice _price;
 

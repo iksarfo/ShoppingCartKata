@@ -2,14 +2,16 @@
 {
     public class Checkout
     {
-        public Checkout(IPrice calculator)
+        private readonly ICalculate _calculator;
+
+        public Checkout(ICalculate calculator)
         {
-            throw new System.NotImplementedException();
+            _calculator = calculator;
         }
 
-        public decimal Cost(string[] items)
+        public CheckoutResult Complete(string[] items)
         {
-            throw new System.NotImplementedException();
+            return new CheckoutResult(items, _calculator.Sum(items));
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System.ComponentModel.Design;
+using NUnit.Framework;
 
 namespace ShoppingCartKata
 {

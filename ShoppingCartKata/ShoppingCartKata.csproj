@@ -47,6 +47,8 @@
   <ItemGroup>
     <Compile Include="Calculator.cs" />
     <Compile Include="CalculatorTests.cs" />
+    <Compile Include="Checkout.cs" />
+    <Compile Include="CheckoutTests.cs" />
     <Compile Include="PricingList.cs" />
     <Compile Include="PricingTests.cs" />
     <Compile Include="Scanner.cs" />

@@ -2,9 +2,11 @@ namespace ShoppingCartKata
 {
     public class Discount
     {
-        public Discount(string itemName, int itemCount, decimal newPrice)
+        public decimal Price { get; private set; }
+
+        public Discount(string itemName, int itemCount, decimal price)
         {
-            throw new System.NotImplementedException();
+            Price = price;
         }
     }
 }

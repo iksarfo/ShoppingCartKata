@@ -45,7 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculator.cs" />
+    <Compile Include="Discount.cs" />
+    <Compile Include="DiscountPricingCalculatorTests.cs" />
+    <Compile Include="Pricing.cs" />
+    <Compile Include="SimplePricing.cs" />
     <Compile Include="CalculatorTests.cs" />
     <Compile Include="Checkout.cs" />
     <Compile Include="CheckoutResult.cs" />

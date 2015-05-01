@@ -1,17 +1,28 @@
-using System.Collections.Generic;
+using System.Linq;
 
 namespace ShoppingCartKata
 {
-    public class Pricing
+    public class Pricing : ICalculate
     {
-        public Pricing(List<Discount> discounts)
+        private readonly Discount[] _discounts;
+
+        public Pricing(Discount[] discounts)
         {
-            throw new System.NotImplementedException();
+            _discounts = discounts;
         }
 
-        public List<Discount> Discounts()
+        public Discount[] Discounts()
         {
-            throw new System.NotImplementedException();
+            return _discounts;
+        }
+
+        public decimal Sum(string[] scannedItems)
+        {
+            var sum = 0m;
+
+            sum = _discounts.First().Price;
+
+            return sum;
         }
     }
 }

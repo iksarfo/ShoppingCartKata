@@ -1,6 +1,11 @@
 ﻿namespace ShoppingCartKata
 {
-    public class Scanner
+    public interface IScan
+    {
+        string[] Scan(string items);
+    }
+
+    public class Scanner : IScan
     {
         public string[] Scan(string items)
         {

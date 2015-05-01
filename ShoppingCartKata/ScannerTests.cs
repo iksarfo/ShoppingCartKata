@@ -14,17 +14,4 @@ namespace ShoppingCartKata
             Assert.That(scannedItems.Length, Is.EqualTo(expectedCount));
         }
     }
-
-    public class PricingList
-    {
-        public PricingList(string prices)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public static decimal Item(string name)
-        {
-            throw new System.NotImplementedException();
-        }
-    }
 }
